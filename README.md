@@ -19,7 +19,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Caia van Haastrecht
 
   #### Je startniveau:
-   rood/blauw
+  blauw
 
   #### Je focus:
   surface plane
@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  https://www.hellofresh.nl/?redirectLinkError=1&email=cpvh05%40protonmail.com 
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Homepagina 
+  <img src="readme-images/hf-home.jpg" width="375px" alt="De homepagina van de hello fresh website">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  receptenpagina
+  <img src="readme-images/hf-recepten.JPG" width="375px" alt="De pagina met een aantal recepten">
  
 </details>
 
