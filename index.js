@@ -8,3 +8,4 @@ function openRecept() {
     var receptBurger = document.querySelector('article.detailpagina');
     receptBurger.classList.add('popUp');
 }
+
