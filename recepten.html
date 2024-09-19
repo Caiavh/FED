@@ -7,65 +7,346 @@
     <title>recepten</title>
 
     <link rel="stylesheet" href="style.css">
-<script src="index.js"></script>
+    <script src="script.js" async></script>
+
 </head>
 
-<body>
+<body class="recept">
     <header>
         <img src="images/hamburgermenu.png" alt="het menu icoon">
         <img src="images/logo.png" alt="het logo van hello fresh">
     </header>
 
-    <main class="recepten">
-        <h1>Menu</h1>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="index.html">HelloFresh</a> <img src="images/breadcrumbs.png" alt="naar de volgende link">
+                </li>
+                <li><a href="#">recepten</a><img src="images/breadcrumbs.png" alt="naar de volgende link"></li>
+                <li><a href="#">Amerikaanse recepten</a><img src="images/breadcrumbs.png" alt="naar de volgende link">
+                </li>
+                <li><a href="#">Mini hamburger emt vegetarische nuggets</a></li>
+            </ul>
+        </nav>
 
-        <section>
-            <img src="images/recept1.jpg" alt="een hamburger met friet">
-            <h4>Italiaanse stijl cheeseburger</h4>
-            <p>met bruschettadip en frietjes met Parmigiano Reggiano</p>
-            <p>25 min</p>
+        <img class="reclame" src="images/reclame1.jpg" alt="Gratis extra's voor 3 maanden">
+
+
+        <img src="images/hamburger.jpg" alt="Een bord met daarop een vegetarische hamburger" id="burgerimg">
+        <section id="lagen">
+            <h1>Mini-hamburgers met vegetarische nuggets</h1>
+            <h2>met mangoketchup, frisse salade en aardappelschijfjes</h2>
+            <a href="#">Bestel soortgelijke recepten voor € 2,83 per portie</a>
         </section>
         <section>
-            <img src="images/recept2.jpg" alt="een pan gevuld met rigatoni">
-            <h4>Rigatoni in mascarpone-tomatensaus met veggie kipstukjes</h4>
-            <p>met Parmigiano Reggiano en verse basilicum</p>
+            <p>Een topper in je box: mangoketchup van The Ketchup Project. Een (h)eerlijk product met een mooi verhaal
+                en een bijzondere smaak.</p>
+            <section id="meer">
+                <p><b>Labels: </b> Familie • Veggie</p>
+                <p> <b>Allergenen: </b>Lupine • Melk (inclusief lactose) • Sesamzaad • Tarwe
+                    • Gerst • Soja • Sulfiet • Mosterd</p>
+            </section>
+            <button id="meerknop">Lees meer</button>
+            <p>Raadpleeg altijd het productetiket voor de meest accurate informatie over ingrediënten en allergenen</p>
+            <div class="informatie">
+                <ul>
+                    <li>Bereidingstijd</li>
+                    <li>Oventijd</li>
+                    <li>Niveau</li>
+                </ul>
+                <ul>
+                    <li>25 minuten</li>
+                    <li>20 minuten</li>
+                    <li>Gemiddeld</li>
+                </ul>
+            </div>
         </section>
-        <section>
-            <img src="images/recept3.jpg" alt="bord gevuld met pastasalade">
-            <h4>Romige farfalle met kip in courgettesaus</h4>
-            <p>met Parmigiano Reggiano, basilicumcrème en cherrytomaten</p>
-            <p>25 min | Familie</p>
-        </section>
-        <article class="detailpagina" class="popUp">
-            <img src="images/recept1.jpg" alt="een hamburger met friet">
-            <h1>Italiaanse stijl cheeseburger</h1>
-            <p>met bruschettadip en frietjes met Parmigiano Reggiano</p>
+
+        <img class="reclame" src="images/reclame.jpg" alt="Gratis extra's voor 3 maanden">
+
+        <details>
+            <summary>
+                <h2>Voedingswaarden</h2>
+            </summary>
+            <button>per gerecht</button> <button>per 100g</button>
+            <div class="informatie">
+                <ul>
+                    <li>Energie (kcal)</li>
+                    <li>Energie (KJ)</li>
+                    <li>Vetten</li>
+                    <li>Waarvan verzadigd</li>
+                    <li>Koolhydraten</li>
+                    <li>Waarvan suikers</li>
+                    <li>Vezels</li>
+                    <li>Eiwitten</li>
+                    <li>Zout</li>
+                </ul>
+                <ul>
+                    <li>902 kcal</li>
+                    <li>3774 KJ</li>
+                    <li>46.6 g</li>
+                    <li>9.1 g</li>
+                    <li>92.6 g</li>
+                    <li>18.9 g</li>
+                    <li>13.3 g</li>
+                    <li>22.1 g</li>
+                    <li>2.7 g</li>
+                </ul>
+            </div>
+        </details>
+        <details>
+            <summary>
+                <h2>Ingredienten</h2>
+            </summary>
             <ul>
                 <li>
-                    <p><b>Bereidingstijd</b></p>
-                    <p>25 minuten</p>
+                    <img src="images/broodje.jpg" alt="een hamburgerbroodje">
+                    <p>2 stuk(s)</p>
+                    <p>Mini-hamburgerbol (Bevat <b> Lupine, Melk (inclusief lactose), Sesamzaad, Tarwe</b> kan bevatten
+                        <b> Eieren, Gluten, Noten, Soja</b>)
+                    </p>
                 </li>
                 <li>
-                    <p><b>caloriën</b></p>
-                    <p>1367</p>
+                    <img src="images/nuggets.jpg" alt="vegetarische nuggets">
+                    <p>5 stuk(s)</p>
+                    <p>Vega nuggets (Bevat <b>Tarwe, Gerst, Soja</b> kan bevatten <b>Mosterd</b>)</p>
                 </li>
                 <li>
-                    <p><b>Moeilijkheid</b></p>
-                    <p>Makkelijk</p>
+                    <img src="images/ketchup.jpg" alt="een bakje met mangoketchup">
+                    <p>30 gram</p>
+                    <p>Mangoketchup (bevat <b>Sulfiet</b>)</p>
+                </li>
+                <li>
+                    <img src="images/dressing.jpg" alt="een bakje met yoghurtdressing">
+                    <p>20 gram</p>
+                    <p>Yoghurtdressing (Bevat <b>Melk (inclusief lactose), Mosterd)</b></p>
+                </li>
+                <li>
+                    <img src="images/aardappel.jpg" alt="een aantal aardappels">
+                    <p>100 gram</p>
+                    <p>aardappelschijfjes</p>
+                </li>
+                <li>
+                    <img src="images/sla.jpg" alt="een krop ijsbergsla">
+                    <p>¼ head</p>
+                    <p>ijsbergsla</p>
+                </li>
+                <li>
+                    <img src="images/tomaat.jpg" alt="een tomaat">
+                    <p>1 stuk(s)</p>
+                    <p>Tomaat</p>
                 </li>
             </ul>
-            <hr>
-            <p>Wist je dat Parmigiano Reggiano zijn naam te danken heeft aan de streek waar deze kaas geproduceerd wordt? Namelijk de Italiaanse provincies Parma en Reggio Emilia.</p>
-            <hr>
-            <h2>Allergenen</h2>
-            <p>Rogge • Tarwe • Melk (inclusief lactose) • Gluten • Eieren • Mosterd • Selderij • Soja • Kan sporen van  allergenen bevatten • Melk (inclusief lactose) • Noten • Sesamzaad</p>
-        </article>
+            <section>
+                <h3> Zelf toevoegen </h3>
+                <ul>
+                    <li>
+                        <img src="images/olie.jpg" alt="een bakje met olie">
+                        <p>½ el</p>
+                        <p>Zonnebloemolie</p>
+                    </li>
+                    <li>
+                        <img src="images/boter.jpg" alt="een plankje met daarop 2 stukjes boter">
+                        <p>½ el</p>
+                        <p>[Plantaardige] roomboter</p>
+                    </li>
+                    <li>
+                        <img src="images/mayonaise.jpg" alt="een bakje met mayonaise">
+                        <p>1 el</p>
+                        <p>[Plantaardige] mayonaise</p>
+                    </li>
+                    <li>
+                        <img src="images/peperzout.jpg" alt="een bakje met peper en zout">
+                        <p>Naar smaak</p>
+                        <p>Peper en zout</p>
+                    </li>
+                </ul>
+            </section>
+
+        </details>
+        <details>
+            <summary>
+                <h2>Benodigdheden</h2>
+            </summary>
+            <ul>
+                <li>Koekenpan</li>
+                <li>Saladekom</li>
+            </ul>
+        </details>
+        <details>
+            <summary>
+                <h2>Instructies</h2>
+            </summary>
+            <section>
+                <img src="images/stap1.jpg" alt="Het bakken van de aardappelschijfjes">
+                <h3>1</h3>
+                <ul>
+                    <li>Verhit 1/2 el roomboter per persoon in een koekenpan op middelhoog vuur.</li>
+                    <li>Bak de aardappelschijfjes in 15 minuten knapperig (zie Tip). Breng op smaak met peper en zout.
+                    </li>
+                    <li>Snijd ondertussen de tomaten in blokjes.</li>
+                    <li>Snijd de ijsbergsla fijn. </li>
+                </ul>
+                <p><b>Tip:</b> <em>Bak je het voor meer dan 2 personen? Gebruik dan 2 koekenpannen.</em></p>
+            </section>
+            <section>
+                <img src="images/stap2.jpg" alt="Het bakken van de vegetarische nuggets">
+                <h3>2</h3>
+                <ul>
+                    <li>Verhit 1/2 el zonnebloemolie per persoon in een andere koekenpan op middelhoog vuur.</li>
+                    <li>Bak de vegan nuggets 6 - 8 minuten, of tot ze krokant zijn.</li>
+                </ul>
+            </section>
+            <section>
+                <img src="images/stap3.jpg" alt="het maken van de salade">
+                <h3>3</h3>
+                <ul>
+                    <li>Meng in een saladekom de ijsbergsla en de tomatenblokjes met de yoghurtdressing.</li>
+                    <li>Breng op smaak met peper en zout.</li>
+                </ul>
+                <p><b>Weetje:</b><em>Wist je dat tomaten veel voordelen hebben voor je gezondheid? Ze zijn rijk aan
+                        vitamine A, C, E én lycopeen. Lycopeen is een antioxidant en beschermt onze cellen tegen
+                        schadelijke invloeden. Hoe rijper de tomaat, hoe meer lycopeen!</em></p>
+
+            </section>
+            <section>
+                <img src="images/stap4.jpg" alt="het samenstellen van de hamburger">
+                <h3>4</h3>
+                <ul>
+                    <li>Snijd de hamburgerbroodjes open en besmeer met de mangoketchup.</li>
+                    <li>Verdeel wat van de salade over de broodjes.</li>
+                    <li>Leg hierop de vegan nuggets.</li>
+                    <li>Serveer met de overige salade, de aardappelschijfjes en de mayonaise (zie Tip).</li>
+                </ul>
+                <p><b>Tip:</b><em>Deze maaltijd is calorierijk. Let jij op je calorie-inname? Laat de overige
+                        mayonaise dan achterwege.</em></p>
+
+
+            </section>
+        </details>
+        <section>
+            <a href="#">Sla recepten</a>
+            <a href="#">Aardappel recepten</a>
+        </section>
+
+        <h2>Probeer deze recepten ook eens</h2>
+        <ul class="probeerook">
+            <li>
+                <section>
+                    <img src="images/pancakes.jpg" alt="een stapel met pancakes en mascarpone">
+                    <h4>American pancakes met mascarpone</h4>
+                    <p>2 porties | met zelfgemaakte frambozensaus en honing</p>
+                    <p>648 kcal | 25 minuten </p>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <img src="images/muffins.jpg" alt="muffins met griezelige verziering">
+                    <h4>Angstaanjagende muffins</h4>
+                    <p>12 stuks | met roomkaas-chocoladetopping</p>
+                    <p>1712 kcal | 50 minuten</p>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <img src="images/Bananenbrood.jpg" alt="een Bananenbrood met plakjes ernaast">
+                    <h4>Bananenbrood met gember
+                    </h4>
+                    <p> 12 plakken | met sinaasappel en gehakte pecannoten</p>
+                    <p>1530 kcal | 1 uur 25 minuten</p>
+                </section>
+            </li>
+        </ul>
+        <section>
+            <h2>Ontdek meer lekkers in de app</h2>
+            <p>Kies je recepten, waar en wanneer je wilt.</p>
+            <a href="https://apps.apple.com/nl/app/hellofresh-koken-eten-klaar/id970107419" class="appstore"><img
+                    src="images/appstore.png" alt="ontdek het in de app store"></a>
+        </section>
+        <section class="dropdown">
+            <details>
+                <summary><button>HelloFresh<img src="images/dropdown.png" alt="een dropdown icoon"></button></summary>
+
+                <ul>
+                    <li>
+                        <a href="#">Cadeaubon</a>
+                    </li>
+                    <li>
+                        <a href="#">Unidays</a>
+                    </li>
+                    <li>
+                        <a href="#">Student/afgestudeerde</a>
+                    </li>
+                    <li>
+                        <a href="#">Promotions</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li> <a href="#">recepten</a>
+                    </li>
+                    <li>
+                        <a href="#">Cookievoorkeuren</a>
+                    </li>
+                </ul>
+            </details>
+
+            <details>
+                <summary><button>Ons bedrijf</button></summary>
+                <ul>
+                    <li>
+                        <a href="#">HelloFresh Group</a>
+                    </li>
+                    <li>
+                        <a href="#">Jobs</a>
+                    </li>
+                    <li>
+                        <a href="#">Pers</a>
+                    </li>
+                </ul>
+            </details>
+            <details>
+                <summary><button>Samenwerken?</button></summary>
+                <ul>
+                    <li><a href="#">Partnerprogramma/Affiliates</a></li>
+                    <li><a href="#">Influencers</a></li>
+                    <li><a href="#">Marketingsamenwerking</a></li>
+                    <li><a href="#">Voor bedrijven</a></li>
+                </ul>
+            </details>
+            <details>
+                <summary><button>Hulp nodig?</button></summary>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Helpcenter</a></li>
+                    <li><a href="#">Tevredenheid</a></li>
+                    <li><a href="#">Voor bedrijven</a></li>
+                </ul>
+            </details>
+        </section>
+        <section class="betaalmethoden">
+            <h2>Betaalmethoden</h2>
+            <img src="images/mastercard.svg" alt="mastercard betaalmethode">
+            <img src="images/visa.svg" alt="Visa betaalmethode">
+            <img src="images/discover.svg" alt="Discover betaalmethode">
+            <img src="images/amex.svg" alt="American express betaalmethode">
+            <img src="images/paypal.svg" alt="paypal betaalmethode">
+            <img src="images/klarna.svg" alt="Klarna betaalmethode">
+        </section>
 
 
     </main>
     <footer>
+        <a href="#">Algemene voorwaarden</a>
+        <a href="#">Privacy- en Cookiestatement</a>
+        <a href="#">Correspondentie</a>
+        <p>© HelloFresh 2024</p>
+    </footer>
+
+    <!-- <footer>
         <button>Bekijk onze prijzen</button>
     </footer>
+     -->
 
 </body>
 
