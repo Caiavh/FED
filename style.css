@@ -5,6 +5,9 @@
     --font-kleur-primair: black;
     --font-kleur-secundair: rgb(103 103 103);
     --Fresh-groen: rgb(6, 122, 70);
+
+    --kopjes: "Agrandir", 'comic sans', sans-serif;
+    --tekst: "source-sans-pro", "Trebuchet MS", Helvetica, sans-serif;
 }
 
 @font-face {
@@ -37,14 +40,37 @@ header {
 
 }
 
-header img:first-of-type {
+.hamburgermenu {
     width: 1.5em;
     height: 1.5em;
     margin-left: 1em;
     margin-top: 1em;
 }
 
-header img:nth-of-type(2) {
+.menu {
+    background-color: var(--primaire-achtergrond);
+    border: solid red;
+
+    position: fixed;
+    left: 0;
+    right: 33%;
+    top: 0;
+    bottom: 0;
+}
+
+.menu a {
+    background-color: transparent;
+    color: var(--font-kleur-primair);
+}
+
+.menu li:first-of-type a {
+    background-color: var(--primaire-achtergrond);
+    border: solid var(--Fresh-groen);
+    color: var(--Fresh-groen);
+}
+
+
+header img:first-of-type {
     width: auto;
     height: 2em;
     margin: auto;
@@ -62,6 +88,7 @@ h2 {
     font-weight: lighter;
     font-size: 24px;
     line-height: 32px;
+    text-align: center;
 }
 
 h3 {
@@ -142,7 +169,7 @@ a {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -156,6 +183,10 @@ section:nth-of-type(2) {
     padding-bottom: 4em;
 }
 
+section:nth-of-type(2) p {
+    margin-left: 1em;
+}
+
 ul:first-of-type {
     padding-left: 0;
 
@@ -164,7 +195,6 @@ ul:first-of-type {
 ul:first-of-type li p {
     margin-top: 0;
     margin-bottom: 1em;
-    margin-left: 1em;
 
 }
 
@@ -175,6 +205,8 @@ ul:first-of-type li p {
 
 ul li {
     display: flex;
+    font-family: "source-sans-pro", "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 16px;
 }
 
 li {
@@ -187,13 +219,11 @@ li p {
 }
 
 section:nth-of-type(3) img {
-    width: 90vw;
     padding-top: 1.9em;
 }
 
 section:nth-of-type(3) h2 {
     text-align: center;
-    /* padding: 32px 10px 8px 10px; */
 }
 
 .homepagina section:nth-of-type(3) p:first-of-type {
@@ -211,7 +241,7 @@ section:nth-of-type(3) h2 {
 }
 
 .appstore img {
-    width: 60%;
+    width: 50%;
 }
 
 .homepagina section:nth-of-type(4) {
@@ -220,6 +250,16 @@ section:nth-of-type(3) h2 {
     background-position: center bottom;
     background-size: 100vw;
     background-repeat: no-repeat;
+}
+
+.homepagina section:nth-of-type(4) li p {
+    margin-left: 1em;
+}
+
+section:nth-of-type(6) {
+    width: 80%;
+    border-radius: .5em;
+
 }
 
 section:nth-of-type(6) img {
@@ -232,9 +272,13 @@ section:nth-of-type(6) div {
     display: flex;
     font-family: "source-sans-pro", "Trebuchet MS", Helvetica, sans-serif;
     color: white;
-
+    font-weight: 700;
+    background: linear-gradient(rgb(36, 36, 36) 0%, rgba(36, 36, 36, 0) 100%);
     position: absolute;
-    left: 2em;
+    left: .8em;
+    padding-top: .5em;
+    border-radius: .5em;
+    width: 15.5em;
 }
 
 section:nth-of-type(6) div img {
@@ -369,6 +413,7 @@ summary {
     font-weight: bold;
 }
 
+
 /* -------------------------
 Dit is de tweede pagina
 ------------------------- */
@@ -396,13 +441,18 @@ footer a {
     text-align: center;
     padding-right: .5em;
     padding-left: 0;
+}
 
+footer div {
+    display: flex;
+    flex-direction: row;
 }
 
 .recept nav {
     background-image: none;
     background-color: white;
-    padding-bottom: .5em;
+    margin-top: -1em;
+    border-bottom: solid 1px rgb(213, 213, 213);
 }
 
 .recept nav ul {
@@ -414,9 +464,10 @@ footer a {
 .recept nav a {
     background-color: transparent;
     color: var(--font-kleur-primair);
-    font-size: 14px;
+    font-size: 12px;
     text-overflow: ellipsis;
-    padding: 1em;
+    padding: .5em;
+    margin: .5em;
 }
 
 .recept nav li {
@@ -431,7 +482,7 @@ footer a {
 
 #burgerimg {
     position: absolute;
-    top: 15em;
+    top: 14em;
     left: 0em;
 
     z-index: -1;
@@ -452,12 +503,11 @@ footer a {
 }
 
 #lagen {
-    margin: 13em 1em 0;
+    margin: 12em 1em 0;
 }
 
 .recept section:nth-of-type(2) {
     background-color: var(--primaire-achtergrond);
-    margin-left: 1em;
     margin-right: 1em;
     padding: 1em 1em 1em;
     border-top: 1px solid rgb(238, 238, 238);
@@ -491,6 +541,15 @@ footer a {
     background-color: transparent;
     color: rgb(103, 103, 103);
     text-decoration-line: underline;
+    display: block;
+}
+
+.ontdekken {
+    padding: 1em;
+    background-image: url(images/strepen2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 details {
@@ -507,6 +566,32 @@ details {
 
 .recept details {
     margin: 0 auto;
+}
+
+.recept details:nth-of-type(4) li {
+    font-size: 14px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+.recept details:nth-of-type(4) p {
+    text-align: left;
+}
+
+.instructies {
+    display: flex;
+    justify-content: center;
+}
+
+.instructies h3 {
+    background-color: var(--font-kleur-secundair);
+    border-radius: 100%;
+    padding: .5em 1em;
+}
+
+.recept details:nth-of-type(4) img {
+    width: 80vw;
+    margin-left: 0em;
 }
 
 .informatie ul {
@@ -533,27 +618,40 @@ details {
     display: flex;
     justify-content: space-between;
     margin-right: 1em;
+    margin-left: 1em;
 }
 
 .betaalmethoden img {
     height: 2.5em;
 }
 
+.betaalmethoden div {
+    display: flex;
+
+}
+
 .reclame {
     margin: 1em auto;
     display: block;
+    width: 80vw;
 }
 
-.recept details:nth-of-type(2) img {
-    width: 3.1em;
+table img {
     height: 3.1em;
+    width: 3.1em;
 
     border-radius: 50%;
     border-style: solid;
     border-width: 1px;
     border-color: rgb(238, 238, 238);
     overflow: hidden;
-    flex-shrink: 0;
+}
+
+table p {
+    margin-right: 1em;
+    text-align: start;
+    max-width: 7em;
+
 }
 
 .probeerook {
@@ -562,7 +660,90 @@ details {
     overflow-x: scroll;
 }
 
+.probeerook h4 {
+    font-family: var(--kopjes);
+}
+
+.probeerook p {
+    font-size: 0.875em;
+    margin: 0;
+}
+
+.probeerook li {
+    margin-left: 1em;
+}
+
 .probeerook img {
+    padding: 0em;
+    width: 20em;
+    height: auto;
+}
+
+.linksrecepten {
+    background-color: var(--primaire-achtergrond);
+    margin: 2em 1em;
+    height: 7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.linksrecepten a {
+    background-color: transparent;
+    color: var(--Fresh-groen);
+    text-decoration: underline;
+    line-height: 1em;
+}
+
+.linksrecepten img:first-of-type {
+    position: absolute;
+    left: 1em;
+    width: 20%;
+    height: 13.5%;
     object-fit: contain;
-    padding: 0;
+    object-position: left bottom;
+}
+
+.linksrecepten img:nth-of-type(2) {
+    position: absolute;
+    width: 20%;
+    height: 13.5%;
+    right: 1em;
+    object-fit: contain;
+    object-position: right top;
+}
+
+.recept section:nth-of-type(14) {
+    background-image: url(images/strepen2.png);
+}
+
+.voedingswaarden {
+    display: flex;
+    flex-direction: row;
+    padding-right: 1em;
+}
+
+.voedingswaarden button {
+    margin: 0em;
+    display: inline-block;
+
+    border: solid var(--Fresh-groen);
+    background-color: rgb(255, 255, 255);
+    color: rgb(6, 122, 70);
+}
+
+.voedingswaarden button:first-of-type{
+    border-radius: 4px 0px 0px 4px;
+}
+
+.voedingswaarden button:nth-of-type(2){
+    border-radius: 0px 4px 4px 0px;
+    border-left-width: 0px;
+    padding: 8px 16px;
+}
+
+.voedingswaarden button:active {
+    background-color: rgb(6, 122, 70);
+    color: rgb(255, 255, 255);
 }

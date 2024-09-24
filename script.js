@@ -10,7 +10,7 @@ function meerLezen() {
 
     // Verberg de knop na het klikken
     leesKnop.style.display = "none";
-};
+}
 
 
 
