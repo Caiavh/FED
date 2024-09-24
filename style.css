@@ -747,3 +747,35 @@ table p {
     background-color: rgb(6, 122, 70);
     color: rgb(255, 255, 255);
 }
+
+.ingredienten {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0em;
+}
+
+.ingredienten p {
+    margin-right: .5em;
+}
+
+.ingredienten button {
+    border: 1px solid var(--Fresh-groen);
+    padding: 8px 16px;
+    color: var(--Fresh-groen);
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.ingredienten button:active {
+    background-color: rgb(6, 122, 70);
+    color: rgb(255, 255, 255);
+}
+
+.ingredienten button:first-of-type {
+    border-radius: 4px 0px 0px 4px;
+}
+
+.ingredienten button:last-of-type {
+    border-radius: 0px 4px 4px 0px;
+}
