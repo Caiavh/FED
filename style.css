@@ -1,6 +1,7 @@
 :root {
     --primaire-achtergrond: white;
     --secudaire-achtergrond: rgb(248 248 248);
+    --tertaire-achtergrond: rgb(111 111 111);
     --recepten-achtergrond: rgb(248, 248, 248);
     --font-kleur-primair: black;
     --font-kleur-secundair: rgb(103 103 103);
@@ -23,6 +24,7 @@ body {
     padding: 0;
     font-family: "Agrandir", 'comic sans', sans-serif;
     color: var(--font-kleur-primair);
+    background-color: var(--primaire-achtergrond);
 }
 
 header {
@@ -34,6 +36,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
 
     position: sticky;
     top: 0;
@@ -44,29 +47,46 @@ header {
     width: 1.5em;
     height: 1.5em;
     margin-left: 1em;
-    margin-top: 1em;
+}
+
+.lightdark {
+    margin-right: 1em;
 }
 
 .menu {
     background-color: var(--primaire-achtergrond);
-    border: solid red;
+    display: block;
 
     position: fixed;
     left: 0;
+
     right: 33%;
     top: 0;
     bottom: 0;
+
+    transform: translateX(-150%);
+
+    box-shadow: 8em 0em rgb(36 36 36 / 57%);
 }
+
 
 .menu a {
     background-color: transparent;
     color: var(--font-kleur-primair);
+    width: 50em;
 }
 
 .menu li:first-of-type a {
     background-color: var(--primaire-achtergrond);
     border: solid var(--Fresh-groen);
     color: var(--Fresh-groen);
+    margin: 1em 1em;
+    padding: 0.5em 6em;
+}
+
+.menu svg {
+    margin-right: 1em;
+    fill: var(--font-kleur-primair);
 }
 
 
@@ -74,6 +94,17 @@ header img:first-of-type {
     width: auto;
     height: 2em;
     margin: auto;
+}
+
+.toonMenu {
+    transform: translateX(0%);
+}
+
+.sluitmenu {
+    margin-left: 1em;
+    margin-top: 2em;
+    width: 2em;
+    height: 2em;
 }
 
 h1 {
@@ -84,7 +115,6 @@ h1 {
 }
 
 h2 {
-
     font-weight: lighter;
     font-size: 24px;
     line-height: 32px;
@@ -137,6 +167,8 @@ section {
     max-width: 100%;
 
     padding: 0 .8em;
+
+    color: black;
 }
 
 section:first-of-type h2 {
@@ -209,10 +241,6 @@ ul li {
     font-size: 16px;
 }
 
-li {
-    list-style-type: none;
-}
-
 li p {
     text-align: left;
     font-size: 1em;
@@ -250,41 +278,65 @@ section:nth-of-type(3) h2 {
     background-position: center bottom;
     background-size: 100vw;
     background-repeat: no-repeat;
+    padding-top: 1em;
 }
 
 .homepagina section:nth-of-type(4) li p {
     margin-left: 1em;
 }
 
-section:nth-of-type(6) {
-    width: 80%;
-    border-radius: .5em;
-
+section:nth-of-type(6) ul {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    white-space: nowrap;
+    padding: .6em;
+    gap: .5em;
 }
 
 section:nth-of-type(6) img {
-    width: 80%;
+    width: 20em;
     border-radius: .5em;
+    margin-right: 1em;
 
 }
 
 section:nth-of-type(6) div {
     display: flex;
-    font-family: "source-sans-pro", "Trebuchet MS", Helvetica, sans-serif;
     color: white;
-    font-weight: 700;
     background: linear-gradient(rgb(36, 36, 36) 0%, rgba(36, 36, 36, 0) 100%);
-    position: absolute;
-    left: .8em;
+
+    position: relative;
+    bottom: 20em;
     padding-top: .5em;
+    padding-left: 1em;
     border-radius: .5em;
-    width: 15.5em;
+    width: 19em;
+    z-index: 1;
 }
 
 section:nth-of-type(6) div img {
     width: 3em;
     height: 3em;
     margin-right: 2em;
+}
+
+section:nth-of-type(6) li {
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+}
+
+section:nth-of-type(6) {
+    display: flex;
+    flex-direction: column;
+}
+
+section:nth-of-type(6) li p {
+    max-width: 19em;
+    text-wrap: wrap;
+    position: relative;
+    bottom: 3em;
 }
 
 .carrousel {
@@ -315,12 +367,14 @@ section:nth-of-type(6) div img {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black);
     color: white;
     border-radius: 5px;
-    width: 16.3em;
+    width: 15.3em;
+    padding-left: 1em;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
 
 section:nth-of-type(7) {
     background-image: url(images/achtergrond2.jpg);
@@ -333,6 +387,7 @@ section:nth-of-type(7) {
     text-align: center;
     padding-top: 1.3em;
     padding-bottom: 1.3em;
+    color: black;
 }
 
 section:nth-of-type(7) p {
@@ -346,12 +401,13 @@ section:nth-of-type(8) {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: var(--tertaire-achtergrond);
+
     padding-bottom: 3em;
     align-items: center;
 
     display: flex;
     flex-direction: column;
-
 }
 
 button {
@@ -389,8 +445,6 @@ button div {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-
-
 }
 
 .dropdown li a {
@@ -404,6 +458,10 @@ button div {
     margin: .5em;
 }
 
+.dropdown h2 {
+    display: none;
+    font-size: 0px;
+}
 
 summary {
     list-style-position: outside;
@@ -413,6 +471,9 @@ summary {
     font-weight: bold;
 }
 
+details button { 
+    color: var(--font-kleur-primair);
+}
 
 /* -------------------------
 Dit is de tweede pagina
@@ -443,7 +504,14 @@ footer a {
     padding-left: 0;
 }
 
+
 footer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer ul {
     display: flex;
     flex-direction: row;
 }
@@ -455,13 +523,13 @@ footer div {
     border-bottom: solid 1px rgb(213, 213, 213);
 }
 
-.recept nav ul {
+.recept main nav ul {
     display: flex;
     max-height: 3.5em;
     text-overflow: ellipsis;
 }
 
-.recept nav a {
+.recept main nav a {
     background-color: transparent;
     color: var(--font-kleur-primair);
     font-size: 12px;
@@ -561,7 +629,6 @@ details {
     width: 90vw;
     padding: 1em;
     padding-right: 0em;
-    ;
 }
 
 .recept details {
@@ -733,11 +800,11 @@ table p {
     color: rgb(6, 122, 70);
 }
 
-.voedingswaarden button:first-of-type{
+.voedingswaarden button:first-of-type {
     border-radius: 4px 0px 0px 4px;
 }
 
-.voedingswaarden button:nth-of-type(2){
+.voedingswaarden button:nth-of-type(2) {
     border-radius: 0px 4px 4px 0px;
     border-left-width: 0px;
     padding: 8px 16px;
@@ -778,4 +845,9 @@ table p {
 
 .ingredienten button:last-of-type {
     border-radius: 0px 4px 4px 0px;
+}
+
+.disable {
+    height: 100%;
+    overflow-y: hidden;
 }
