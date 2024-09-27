@@ -176,7 +176,7 @@ section {
     align-items: center;
     justify-content: space-evenly;
 
-    background-image: url(/images/achtergrond.jpg);
+    background-image: url(images/achtergrond.jpg);
     background-repeat: no-repeat;
 
     min-height: 25.6em;
