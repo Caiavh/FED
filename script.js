@@ -118,3 +118,27 @@ knoppen.forEach((knop) => {
     });
 });
 
+// Dark mode
+document.querySelector('.lightdark').addEventListener('click', function() {
+    const root = document.documentElement;
+
+    // Check of de huidige achtergrondkleur donker is     --font-kleur-tertair: rgb(181 181 181);
+    if (root.style.getPropertyValue('--primaire-achtergrond') === 'black') {
+        // Zet naar licht thema 
+        root.style.setProperty('--primaire-achtergrond', 'white');
+        root.style.setProperty('--secudaire-achtergrond', 'rgb(248, 248, 248)');
+        root.style.setProperty('--font-kleur-primair', 'black');
+        root.style.setProperty('--font-kleur-secundair', 'rgb(103, 103, 103)');
+        root.style.setProperty('--font-kleur-tertair', 'rgb(181 181 181)');
+        root.style.setProperty('--Fresh-groen', 'rgb(103, 103, 103)');
+    } else {
+        // Zet naar donker thema
+        root.style.setProperty('--primaire-achtergrond', 'black');
+        root.style.setProperty('--secudaire-achtergrond', 'rgb(33, 33, 33)');
+        root.style.setProperty('--tertaire-achtergrond', 'rgb(111, 111, 111)');
+        root.style.setProperty('--font-kleur-primair', 'white');
+        root.style.setProperty('--font-kleur-secundair', 'rgb(150, 150, 150)');
+        root.style.setProperty('--font-kleur-tertair', 'rgb(113 113 113);');
+        root.style.setProperty('--Fresh-groen', 'rgb(25 173 106);');
+    }
+});

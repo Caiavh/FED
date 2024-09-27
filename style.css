@@ -1,10 +1,11 @@
 :root {
     --primaire-achtergrond: white;
     --secudaire-achtergrond: rgb(248 248 248);
-    --tertaire-achtergrond: rgb(111 111 111);
+    --tertaire-achtergrond: rgb(255, 255, 255);
     --recepten-achtergrond: rgb(248, 248, 248);
     --font-kleur-primair: black;
     --font-kleur-secundair: rgb(103 103 103);
+    --font-kleur-tertair: rgb(181 181 181);
     --Fresh-groen: rgb(6, 122, 70);
 
     --kopjes: "Agrandir", 'comic sans', sans-serif;
@@ -53,6 +54,20 @@ header {
     margin-right: 1em;
 }
 
+/* Begin met de limoenen buiten beeld */
+.limoenen {
+    position: absolute;
+    top: -120%;  /* Start ver boven het scherm */
+    left: 50%;  /* Centreer horizontaal */
+    transform: translateX(-50%);
+    transition: top 3s ease-in-out; /* Animatie voor vloeiende beweging */
+}
+
+/* Klasse die wordt toegevoegd om limoenen te laten "vallen" */
+.limoenregen {
+    top: 200%;  /* Beweeg naar onderen, buiten beeld */
+}
+
 .menu {
     background-color: var(--primaire-achtergrond);
     display: block;
@@ -87,6 +102,7 @@ header {
 .menu svg {
     margin-right: 1em;
     fill: var(--font-kleur-primair);
+    color: var(--font-kleur-primair);
 }
 
 
@@ -177,6 +193,13 @@ section:first-of-type h2 {
     line-height: 40px;
 }
 
+.typewrite {
+    background-color: transparent;
+    color: black;
+    font-family: var(--kopjes);
+    font-size: 30px;
+}
+
 .homepagina section:first-of-type p {
     text-align: center;
     font-weight: 400;
@@ -213,6 +236,11 @@ section:nth-of-type(2) {
     background-color: var(--secudaire-achtergrond);
     padding-top: 2em;
     padding-bottom: 4em;
+}
+
+section:nth-of-type(2) svg {
+    width: 3em;
+    height: 1em;
 }
 
 section:nth-of-type(2) p {
@@ -469,9 +497,11 @@ summary {
     background: url(arrow.svg) no-repeat 14px 50%;
     background-size: 18px;
     font-weight: bold;
+    font-size: 16px;
+    font-family: var(--tekst);
 }
 
-details button { 
+details button {
     color: var(--font-kleur-primair);
 }
 
@@ -518,7 +548,7 @@ footer ul {
 
 .recept nav {
     background-image: none;
-    background-color: white;
+    background-color: var(--primaire-achtergrond);
     margin-top: -1em;
     border-bottom: solid 1px rgb(213, 213, 213);
 }
@@ -607,7 +637,7 @@ footer ul {
     margin-top: auto;
     border-width: 0px;
     background-color: transparent;
-    color: rgb(103, 103, 103);
+    color: var(--font-kleur-secundair);
     text-decoration-line: underline;
     display: block;
 }
@@ -651,7 +681,7 @@ details {
 }
 
 .instructies h3 {
-    background-color: var(--font-kleur-secundair);
+    background-color: var(--font-kleur-tertair);
     border-radius: 100%;
     padding: .5em 1em;
 }
