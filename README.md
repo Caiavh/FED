@@ -77,13 +77,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown-home.png" width="375px" alt="breakdown van de hele pagina">
+    <img src="readme-images/breakdown-recept.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/breakdown-menu.png" width="375px" alt="breakdown van een dynamisch deel">
 
 </details>
 
@@ -98,7 +96,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   Ik vond het erg lastig hoe ik de tweede pagina kon voorzien van eigen css, zonder in de knoop te komen met de vormgeving. Zo gebruikte ik namelijk steeds de nth-child. Op die manier wordt het op allebei de pagina's toegevoegd. 
-  
+  <img src="readme-images/afbeelding-1" width="375px"
 
 
 
@@ -182,12 +180,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Agenda voor meeting
   samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  - de logo's die ik gebruik zijn alleen maar facebook logo's. Hoe kan ik dit oplossen?
+  - Hoe kan ik het scherm achter het hamburgermenu vastzetten, zodat scrollen niet mogelijk is. 
 
 
   ### Verslag van meeting
@@ -247,7 +241,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   9. https://dlo.mijnhva.nl/content/enforced/609314-FDMCI-2000FED121-DMCI-CMD-2425/FED%2024-25%20-%20Blok%201%20-%20Oefening%20JS%203-stap.pdf
   10. https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver
   11. https://medium.com/@burcuuusaglam/intersection-observer-in-javascript-and-lazy-load-images-38618f2c5864
-  12. 
+  12. https://www.w3schools.com/howto/howto_js_read_more.asp 
+  13. https://icones.js.org/collection/all
+14. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td 
 
 
 </details>
