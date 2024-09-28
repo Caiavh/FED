@@ -230,14 +230,14 @@ De darkmode laat ik wel nog aanroepen door middel van javascript
 
   ### Dit ging goed/Heb ik geleerd: 
   - Het maken van een light/darkmode
-  <img src="readme-images/afbeelding8.png" width="375px">
-  <img src="readme-images/afbeelding14.png" width="375px">
-  <img src="readme-images/afbeelding9.png" width="375px">
+  - <img src="readme-images/afbeelding8.png" width="375px">
+ - <img src="readme-images/afbeelding14.png" width="375px">
+  - <img src="readme-images/afbeelding9.png" width="375px">
   - Het maken van een carrousel door middel van een horizontale scroll.
-  <img src="readme-images/afbeelding11.png" width="375px">
+  - <img src="readme-images/afbeelding11.png" width="375px">
   - het maken van een dropdown door middel van het  details element. 
-  <img src="readme-images/afbeelding12.png" width="375px">
-  <img src="readme-images/afbeelding13.png" width="375px">
+  - <img src="readme-images/afbeelding12.png" width="375px">
+  - <img src="readme-images/afbeelding13.png" width="375px">
   - het gebruiken van svg's in mijn html pagina.
   - het gebruiken van een tabel in mijn html
   - Het gebruik maken van knoppen die de DOM-manipuleren (in dit geval gebruikt voor het aanpassen van hoeveelheden)
