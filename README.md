@@ -7,9 +7,6 @@ Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal
 Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
 
 
-
-
-
 ## Jij
 
 <details open>
@@ -25,9 +22,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   surface plane
  
 </details>
-
-
-
 
 
 ## Je website
@@ -64,7 +58,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Niet elke afbeelding/icoon is goed aangegeven met een alternatieve tekst. Bij het gebruik van een screenreader wordt er namelijk alleen maar 
     vermeld dat het om een afbeelding gaat maar niet wat daarop te zien is. De afbeeldingen die wel een alternatieve tekst bevatten hebben geen 
     betekenisvolle tekst. 
-  - Sommige delen van de tekst op de homepagina worden overgeslagen en niet voorgelezen.
+  - Sommige delen van de tekst op de homepagina worden overgeslagen en niet voorgelezen. Dit is heel onhandig voor de mensen die gebruik maken van een screenreader. Op deze manier wordt namelijk zo de helft van de pagina overgeslagen. 
   - De recepten op de detailpagina's (pop-up) worden op een onlogische volgorde voorgelezen. Het begint namelijk vanaf onderaan.
 
 </details>
@@ -135,12 +129,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 Ik vond het lastig om te bepalen wanneer een element een section of een div om zich heen moest hebben. Een div is namelijk bepaald voor alleen de vormgeving en een section moet je gebruiken wanneer er een tekst moet worden weergegeven. Soms gebruikte ik een section voor iets en dan kreeg ik later een info. Daarin werd dan verteld dat er een h1-h6 misde. 
   <img src="readme-images/afbeelding4.png" width="375px">
 
-Daarnaast had ik moeite met het aanpassen van de <details>. Ik kon namelijk geen veranderinge aanbrengen in het type pijltje of de volgorde waarin het pijltje en de tekst verschenen. 
+Daarnaast had ik moeite met het aanpassen van de details. Ik kon namelijk geen veranderinge aanbrengen in het type pijltje of de volgorde waarin het pijltje en de tekst verschenen. 
   <img src="readme-images/afbeelding5.png" width="375px">
 
 Daarentegen ging het vormgeven van de website wel al goed. Het begon al steeds meer op de website van Hello Fresh te lijken. 
 
   ### Agenda voor meeting
+  Dit zijn vragen die ik aan Danny stelde tijdens het feedbackuurtje:
   - Wanneer is het gebruiken van een div legaal?
   - Hoe kan ik met css de details aanpassen?
   - Hoe krijg ik de nav op de recept pagina goed in plaats van hoe het er nu staat?
@@ -151,7 +146,7 @@ Daarentegen ging het vormgeven van de website wel al goed. Het begon al steeds m
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
-  - Als ik stukjes gebruik die alleen vormgegeven moeten worden, maar geen heading hebben. 
+  - Als ik stukjes gebruik die alleen vormgegeven moeten worden, maar geen heading hebben, dan mag ik een div gebruiken. Anders zou ik ook nog een section kunnen gebruiken en die wel een h1-h6 kunnen geven, maar dan zet ik de display op 'none'
   - De details zijn moeilijk vorm te geven, dus dat mocht ik laten zoals het er op dit moment uitziet.
   - Alles wat we (Danny en ik) geprobeerd hebben wilde niet werken. Dus heb ik het afgekort ingevuld.
   <img src="readme-images/afbeelding6.png" width="375px">
@@ -170,13 +165,18 @@ Daarentegen ging het vormgeven van de website wel al goed. Het begon al steeds m
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+ verbeteringen
+- De HTML-pagina's zijn volledig gevalideerd. Hoewel ik mijn twee pagina's niet kan vergelijken met de gehele HelloFresh-website, is de website op het gebied van toegankelijkheid en codevalidatie wel verbeterd. 
+
+- Alle afbeeldingen op de pagina bevatten nu een correct ingevuld alt-attribuut. Dit is een belangrijke verbetering ten opzichte van de originele HelloFresh-website, waar niet alle afbeeldingen een alt-tekst hadden of deze niet voldoende beschrijvend was. De alt-teksten op mijn pagina beschrijven de afbeeldingen duidelijk, inclusief de tekst die op de afbeeldingen zelf staat, wat de toegankelijkheid verbetert, vooral voor screenreaders.
+
+- Waar de originele website veel content zonder duidelijke structuur weergaf, heb ik alle opgesomde informatie netjes in een ul geplaatst. Op deze manier zit er een stuk meer structuur in de pagina. 
+
+- Qua visuele verbetering heb ik een light/dark mode toegevoegd, iets wat de originele website niet biedt. Deze functionaliteit zorgt ervoor dat gebruikers hun voorkeur voor een lichtere of donkerdere interface kunnen instellen, wat de leesbaarheid en het comfort verbetert, afhankelijk van de lichtomstandigheden of persoonlijke voorkeuren.
+
+- Voor gebruikers die gevoelig zijn voor bewegingseffecten, is er nu ondersteuning voor de prefers-reduced-motion-instelling. Als deze optie is ingeschakeld op de computer, zal de animatie op mijn homepagina niet worden afgespeeld. In plaats daarvan wordt de tekst in één keer weergegeven. Dit voorkomt overbodige bewegingen en maakt de website toegankelijker. 
 
 </details>
-
-
-
-
 
 ## Voortgang 3 (week 4)
 
@@ -209,7 +209,7 @@ Daarentegen ging het vormgeven van de website wel al goed. Het begon al steeds m
     --Fresh-groen: rgb(25 173 106);
 }
 De darkmode laat ik wel nog aanroepen door middel van javascript
-  - door svg's te gebruiken die van de volgende website komen: https://icones.js.org/collection/all 
+  - Het facebook probleem verhelpen door middel van het gebruiken van svg's van de volgende website : https://icones.js.org/collection/all 
   - Door het toevoegen van een class op de body en deze laten aanroepen bij het openen van het hamburgermenu. De class zal ervoor zorgen dat je de body niet meer kunt scrollen.
   -  Ik moest daarvoor een ander javaScript bestand aanmaken, aangezien ik ook twee html pagina's heb en niet alle elementen op beide schermen voorkomen. 
 - Door het logo van een achtergrond te voorzien. De achtergrond wordt alleen zichtbaar bij het activeren van de darkmode. 
@@ -251,7 +251,6 @@ De darkmode laat ik wel nog aanroepen door middel van javascript
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
   - de dropdowns aanpassen naar hoe het er op de originele website uitziet
     - <img src="readme-images/afbeelding12.png" width="375px">
   - <img src="readme-images/afbeelding13.png" width="375px">
@@ -260,7 +259,9 @@ De darkmode laat ik wel nog aanroepen door middel van javascript
   - door middel van javaScript een carrousel maken. Ik heb het nu namelijk gewoon met enkel css gedaan. 
   - <img src="readme-images/afbeelding22.png" width="375px">
   - <img src="readme-images/afbeelding23.png" width="375px">
+  Voor beide punten heb ik veel onderzoek gedaan naar een eventuele oplossing. Echter, door tijdsdruk, het niet kunnen vinden van de geschikte bronnen of het daadwerkelijk niet mogelijk zijn op de manier dat ik het wilde aanpakken. Heb ik deze onderdelen moeten laten voor wat get wwas 
 
+Voor beide punten heb ik uitgebreid onderzoek gedaan naar mogelijke oplossingen. Helaas, door tijdsdruk, het niet vinden van de juiste informatie, of omdat het op de manier die ik wilde niet mogelijk bleek, heb ik deze onderdelen moeten laten voor wat het was. 
 </details>
 
 
@@ -276,20 +277,27 @@ De darkmode laat ik wel nog aanroepen door middel van javascript
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. https://www.sitepoint.com/style-html-details-element/
-  2. https://blog.hubspot.com/website/horizontal-scrolling#:~:text=To%20enable%20horizontal%20scrolling%2C%20we,it%20accessible%20via%20horizontal%20scrolling.
-  3. https://www.sitepoint.com/style-html-details-element/ 
-  4. https://www.svgrepo.com/svg/445821/information-circle
-  5. https://www.svgrepo.com/svg/421558/burger-menu 
-  6. https://www.shecodes.io/athena/264278-how-to-prevent-content-from-overflowing-in-a-div-element 
-  7. https://stackoverflow.com/questions/76693549/responsive-horizontally-scrollable-image-gallery
-  8. https://www.flaticon.com/free-icon/down-arrow_2985150?term=down+arrow&related_id=2985150
-  9. https://dlo.mijnhva.nl/content/enforced/609314-FDMCI-2000FED121-DMCI-CMD-2425/FED%2024-25%20-%20Blok%201%20-%20Oefening%20JS%203-stap.pdf
-  10. https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver
-  11. https://medium.com/@burcuuusaglam/intersection-observer-in-javascript-and-lazy-load-images-38618f2c5864
-  12. https://www.w3schools.com/howto/howto_js_read_more.asp 
-  13. https://icones.js.org/collection/all
-14. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td 
-
+1. https://www.sitepoint.com/style-html-details-element/
+2. https://blog.hubspot.com/website/horizontal-scrolling#:~:text=To%20enable%20horizontal%20scrolling%2C%20we,it%20accessible%20via%20horizontal%20scrolling.
+3. https://www.svgrepo.com/svg/445821/information-circle
+4. https://www.svgrepo.com/svg/421558/burger-menu
+5. https://www.shecodes.io/athena/264278-how-to-prevent-content-from-overflowing-in-a-div-element
+6. https://stackoverflow.com/questions/76693549/responsive-horizontally-scrollable-image-gallery
+7. https://www.flaticon.com/free-icon/down-arrow_2985150?term=down+arrow&related_id=2985150
+8. https://dlo.mijnhva.nl/content/enforced/609314-FDMCI-2000FED121-DMCI-CMD-2425/FED%2024-25%20-%20Blok%201%20-%20Oefening%20JS%203-stap.pdf
+9. https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver
+10. https://medium.com/@burcuuusaglam/intersection-observer-in-javascript-and-lazy-load-images-38618f2c5864
+11. https://www.w3schools.com/howto/howto_js_read_more.asp
+12. https://icones.js.org/collection/all
+13. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td
+14. https://www.w3schools.com/js/js_objects.asp
+15. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+16. https://www.w3schools.com/js/js_objects.asp
+17. https://www.shecodes.io/athena/1958-what-is-document-queryselectorall-in-javascript 
+19. https://dlo.mijnhva.nl/content/enforced/609314-FDMCI-2000FED121-DMCI-CMD-2425/FED%2024-25%20-%20Blok%201%20-%20Oefening%20JS%203-stap.pdf
+20. https://medium.com/@burcuuusaglam/intersection-observer-in-javascript-and-lazy-load-images-38618f2c5864
+22. https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+23. https://www.w3schools.com/js/js_arrays.asp 
+24. ChatGPT: https://chatgpt.com 
 
 </details>

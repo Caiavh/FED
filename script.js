@@ -1,3 +1,4 @@
+// Het hamburgermenu
 var body = document.querySelector('body');
 var openButton = document.querySelector(".hamburgermenu");
 console.log(openButton);
@@ -20,6 +21,7 @@ function sluitMenu() {
     body.classList.remove('disable');  
 }
 
+// knop voor de 'lees meer' knop
 var leesMeer = document.getElementById("meer");
 var leesKnop = document.getElementById("meerknop");
 
@@ -31,11 +33,11 @@ function meerLezen() {
     leesKnop.style.display = "none";
 }
 
-// Geholpen door ChatGPT: prompt
-const perGerechtBtn = document.getElementById('perGerecht');
-const per100gBtn = document.getElementById('per100g');
+const perGerechtButton = document.getElementById('perGerecht');
+const per100gButton = document.getElementById('per100g');
 const valuesList = document.getElementById('valuesList');
 
+// bron: https://www.shecodes.io/athena/1958-what-is-document-queryselectorall-in-javascript
 function updateValues(values) {
     const listItems = valuesList.getElementsByTagName('li');
     for (let i = 0; i < listItems.length; i++) {
@@ -43,102 +45,96 @@ function updateValues(values) {
     }
 }
 
+perGerechtButton.addEventListener('click', veranderGerecht)
+per100gButton.addEventListener('click', verander100G)
 
-perGerechtBtn.addEventListener('click', function () {
+function veranderGerecht() {
     updateValues(perGerechtValues);
-});
+};
 
-per100gBtn.addEventListener('click', function () {
+function verander100G() {
     updateValues(per100gValues);
-});
+};
 
-
+// Bron: https://www.w3schools.com/js/js_arrays.asp
 const perGerechtValues = ["902 kcal", "3774 KJ", "46.6 g", "9.1 g", "92.6 g", "18.9 g", "13.3 g", "22.1 g", "2.7 g"];
 const per100gValues = ["155 kcal", "647 KJ", "7.99 g", "1.56 g", "15.88 g", "3.24 g", "2.28 g", "3.79 g", "0.46 g"];
-
 
 const knoppen = document.querySelectorAll('.hoeveelheid-knop');
 const hoeveelheden = document.querySelectorAll('.hoeveelheid');
 
 
+// Bron: https://www.w3schools.com/js/js_objects.asp
 const standaardHoeveelheden = [
-    { basis: 2, eenheid: 'stuk(s)' },   // Hamburgerbol
-    { basis: 100, eenheid: 'gram' },    // Aardappelschijfjes
-    { basis: 5, eenheid: 'stuk(s)' },   // Vega nuggets
-    { basis: 0.25, eenheid: 'head' },   // IJsbergsla
-    { basis: 30, eenheid: 'gram' },     // Mangoketchup
-    { basis: 1, eenheid: 'stuk(s)' },   // Tomaat
-    { basis: 20, eenheid: 'gram' },     // Yoghurtdressing
-    { basis: 0.5, eenheid: 'el' },      // Zonnebloemolie
-    { basis: 0.5, eenheid: 'el' },      // Plantaardige roomboter
-    { basis: 1, eenheid: 'el' }         // Mayonaise
+    { basis: 2, eenheid: 'stuk(s)' },   
+    { basis: 100, eenheid: 'gram' },    
+    { basis: 5, eenheid: 'stuk(s)' },   
+    { basis: 0.25, eenheid: 'head' },   
+    { basis: 30, eenheid: 'gram' },     
+    { basis: 1, eenheid: 'stuk(s)' },   
+    { basis: 20, eenheid: 'gram' },     
+    { basis: 0.5, eenheid: 'el' },      
+    { basis: 0.5, eenheid: 'el' },      
+    { basis: 1, eenheid: 'el' }         
 ];
 
 // Functie om de hoeveelheden aan te passen
+// bron: https://www.shecodes.io/athena/1958-what-is-document-queryselectorall-in-javascript
+
 function updateHoeveelheden(vermenigvuldiger) {
-    // Loop door elke hoeveelheid heen
     hoeveelheden.forEach(function(hoeveelheid, index) {
-        // Haal het bijbehorende item op uit standaardHoeveelheden array
         const item = standaardHoeveelheden[index];
-        
-        // Bereken de nieuwe waarde door de basiswaarde te vermenigvuldigen
         const nieuweWaarde = item.basis * vermenigvuldiger;
-        
-        // Variabele om de nieuwe hoeveelheid op te slaan
         let weergaveWaarde;
 
-        // Als de eenheid 'head' is, hoef je de waarde niet te bewerken
         if (item.eenheid === 'head') {
             weergaveWaarde = nieuweWaarde;
-        } 
-        // Als de eenheid 'el' of 'stuk(s)' is, controleer je of het een decimaal getal is
-        else if (item.eenheid === 'el' || item.eenheid === 'stuk(s)') {
-            // Als het geen heel getal is, rond af naar 1 decimaal, anders naar het dichtstbijzijnde hele getal
-            if (nieuweWaarde % 1 !== 0) {
-                weergaveWaarde = nieuweWaarde.toFixed(1); // Afronden op 1 decimaal
-            } else {
-                weergaveWaarde = Math.round(nieuweWaarde); // Afronden op een heel getal
-            }
-        } 
-        // Voor andere eenheden rond je de waarde altijd af naar het dichtstbijzijnde hele getal
-        else {
+        } else if (item.eenheid === 'el' || item.eenheid === 'stuk(s)') {
+            weergaveWaarde = (nieuweWaarde % 1 !== 0) ? nieuweWaarde.toFixed(1) : Math.round(nieuweWaarde);
+        } else {
             weergaveWaarde = Math.round(nieuweWaarde);
         }
 
-        // Update de tekstinhoud van het element met de nieuwe hoeveelheid en eenheid
         hoeveelheid.textContent = weergaveWaarde + ' ' + item.eenheid;
     });
 }
 
-
+// Event listeners toevoegen aan knoppen voor vermenigvuldiging
 knoppen.forEach((knop) => {
     knop.addEventListener('click', () => {
-        const vermenigvuldiger = parseInt(knop.textContent, 10);  // Haal het nummer van de knop op
-        updateHoeveelheden(vermenigvuldiger);  // Pas de hoeveelheden aan
+        const vermenigvuldiger = parseInt(knop.textContent, 10);
+        updateHoeveelheden(vermenigvuldiger);
     });
 });
 
-// Dark mode
-document.querySelector('.lightdark').addEventListener('click', function() {
-    const root = document.documentElement;
 
-    // Check of de huidige achtergrondkleur donker is     --font-kleur-tertair: rgb(181 181 181);
-    if (root.style.getPropertyValue('--primaire-achtergrond') === 'black') {
-        // Zet naar licht thema 
-        root.style.setProperty('--primaire-achtergrond', 'white');
-        root.style.setProperty('--secudaire-achtergrond', 'rgb(248, 248, 248)');
-        root.style.setProperty('--font-kleur-primair', 'black');
-        root.style.setProperty('--font-kleur-secundair', 'rgb(103, 103, 103)');
-        root.style.setProperty('--font-kleur-tertair', 'rgb(181 181 181)');
-        root.style.setProperty('--Fresh-groen', 'rgb(103, 103, 103)');
-    } else {
-        // Zet naar donker thema
-        root.style.setProperty('--primaire-achtergrond', 'black');
-        root.style.setProperty('--secudaire-achtergrond', 'rgb(33, 33, 33)');
-        root.style.setProperty('--tertaire-achtergrond', 'rgb(111, 111, 111)');
-        root.style.setProperty('--font-kleur-primair', 'white');
-        root.style.setProperty('--font-kleur-secundair', 'rgb(150, 150, 150)');
-        root.style.setProperty('--font-kleur-tertair', 'rgb(113 113 113);');
-        root.style.setProperty('--Fresh-groen', 'rgb(25 173 106);');
-    }
-});
+// 1.  Dark mode
+var darkKnop = document.querySelector('.lightdark');
+var innerHTML = document.querySelector('html')
+darkKnop.addEventListener('click', darkMode);
+
+function darkMode() {
+    innerHTML.classList.toggle("darkmode");
+    console.log("darkmode doet het");
+
+}
+
+// 2. blingbling
+
+const logoKnop = document.querySelector('header img:first-of-type');
+const limoenen = document.querySelector('.limoenen');
+// 5. audio
+let audioLimoen = new Audio("audio/limoenen.mp3") 
+
+logoKnop.addEventListener('click', limoenRegen);
+
+function limoenRegen() {
+    limoenen.classList.add('limoenregen');
+    audioLimoen.play();
+};
+
+limoenen.addEventListener('transitionend', liemoenOpnieuw)
+
+function liemoenOpnieuw() {
+    limoenen.classList.remove('limoenregen');
+};
