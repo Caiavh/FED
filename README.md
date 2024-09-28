@@ -152,7 +152,7 @@ Daarentegen ging het vormgeven van de website wel al goed. Het begon al steeds m
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
   - Als ik stukjes gebruik die alleen vormgegeven moeten worden, maar geen heading hebben. 
-  - De <details> zijn moeilijk vorm te geven, dus dat mocht ik laten zoals het er op dit moment uitziet.
+  - De details zijn moeilijk vorm te geven, dus dat mocht ik laten zoals het er op dit moment uitziet.
   - Alles wat we (Danny en ik) geprobeerd hebben wilde niet werken. Dus heb ik het afgekort ingevuld.
   <img src="readme-images/afbeelding6.png" width="375px">
   - Het in het html zetten van een svg heb ik uitgelegd gekregen en naar aanleiding daarvan in mijn html gezet. 
@@ -232,10 +232,10 @@ De darkmode laat ik wel nog aanroepen door middel van javascript
   - Het maken van een light/darkmode
   <img src="readme-images/afbeelding8.png" width="375px">
   <img src="readme-images/afbeelding14.png" width="375px">
-    <img src="readme-images/afbeelding9.png" width="375px">
+  <img src="readme-images/afbeelding9.png" width="375px">
   - Het maken van een carrousel door middel van een horizontale scroll.
   <img src="readme-images/afbeelding11.png" width="375px">
-  - het maken van een dropdown door middel van het <details> element. 
+  - het maken van een dropdown door middel van het  details element. 
   <img src="readme-images/afbeelding12.png" width="375px">
   <img src="readme-images/afbeelding13.png" width="375px">
   - het gebruiken van svg's in mijn html pagina.
