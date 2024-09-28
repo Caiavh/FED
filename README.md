@@ -108,22 +108,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Hier wat vragen die ik had voor de studentassistenten tijdens het feedbackuurtje:
   - Hoe gebruik ik nth-child bij bij meerdere html pagina’s zonder ze op allebei te gebruiken
   - Hoe kan ik de recepten op het homescherm als een carrousel maken. Zoals het ook op de originele site gebeurd?
-  - Moet ik kiezen voor een pop-up of een tweeede scherm?
-
-
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
   - Zorg dat de lettertype in de body wordt aangeroepen, zodat ik dat niet iedere keer hoef te doen. Zo word ook de code netter
   - Zorg dat je de main van de tweede pagina een class geeft zodat ik de css op die manier kan aanroepen
-  - gebruik een ul met daarin li-items. In de li moeten dan de losse elementen van de blokjes van de carrousel komen
-  - Op Hello Fresh 
-
+  - gebruik een ul met daarin li-items. In de li moeten dan de losse elementen van de blokjes van de carrousel komen. Deze carrousel geef je de volgende css mee: 
+    .carrousel {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    white-space: nowrap;
+    }
 </details>
-
-
-
 
 
 ## Voortgang 2 (week 3)
@@ -132,8 +130,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code):
 
+Ik vond het lastig om te bepalen wanneer een element een section of een div om zich heen moest hebben. Een div is namelijk bepaald voor alleen de vormgeving en een section moet je gebruiken wanneer er een tekst moet worden weergegeven. Soms gebruikte ik een section voor iets en dan kreeg ik later een info. Daarin werd dan verteld dat er een h1-h6 misde. 
+  <img src="readme-images/afbeelding4.png" width="375px">
+
+Daarnaast had ik moeite met het aanpassen van de <details>. Ik kon namelijk geen veranderinge aanbrengen in het type pijltje of de volgorde waarin het pijltje en de tekst verschenen. 
+  <img src="readme-images/afbeelding5.png" width="375px">
+
+Daarentegen ging het vormgeven van de website wel al goed. Het begon al steeds meer op de website van Hello Fresh te lijken. 
 
   ### Agenda voor meeting
   - Wanneer is het gebruiken van een div legaal?
@@ -148,9 +153,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   hier na afloop snel de uitkomsten van de meeting vastleggen
   - Als ik stukjes gebruik die alleen vormgegeven moeten worden, maar geen heading hebben. 
   - De <details> zijn moeilijk vorm te geven, dus dat mocht ik laten zoals het er op dit moment uitziet.
-  - Alles wat we (Danny en ik) geprobeerd hebben wilde niet werken. Dus heb ik het afgekort ingevuld. 
-  - Dat heb ik uitgelegd gekregen en naar aanleiding daarvan in mijn html gezet.
-  - 
+  - Alles wat we (Danny en ik) geprobeerd hebben wilde niet werken. Dus heb ik het afgekort ingevuld.
+  <img src="readme-images/afbeelding6.png" width="375px">
+  - Het in het html zetten van een svg heb ik uitgelegd gekregen en naar aanleiding daarvan in mijn html gezet. 
+
 
 </details>
 
@@ -182,21 +188,35 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
   - de logo's die ik gebruik zijn alleen maar facebook logo's. Hoe kan ik dit oplossen?
   - Hoe kan ik het scherm achter het hamburgermenu vastzetten, zodat scrollen niet mogelijk is. 
+  - Waarom komt mijn nav (hamburgermenu niet in beeld bij het drukken op het icoontje)
+  - Bij het gebruiken van de darkmode wordt het logo niet meegekleurd. Hoe kan ik dit oplossen?
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - de :root aanpassen in de css en niet via de javascriptt
-  - het hamburgermenu in laten faden (misschien door midddel van opacity)
+  - de :root aanpassen in de css en niet via de javascript. Dit heb ik gedaan door de volgende code in mijn javascript te zetten:
+  /* bron: Hadil */
+.darkmode {
+    --primaire-achtergrond: black;
+    --secudaire-achtergrond: rgb(33, 33, 33);
+    --tertaire-achtergrond: rgb(100, 99, 99);
+    --font-kleur-primair: white;
+    --font-kleur-secundair: rgb(150, 150, 150);
+    --font-kleur-tertair: rgb(113 113 113);
+    --Fresh-groen: rgb(25 173 106);
+}
+De darkmode laat ik wel nog aanroepen door middel van javascript
+  - door svg's te gebruiken die van de volgende website komen: https://icones.js.org/collection/all 
+  - Door het toevoegen van een class op de body en deze laten aanroepen bij het openen van het hamburgermenu. De class zal ervoor zorgen dat je de body niet meer kunt scrollen.
+  -  Ik moest daarvoor een ander javaScript bestand aanmaken, aangezien ik ook twee html pagina's heb en niet alle elementen op beide schermen voorkomen. 
+- Door het logo van een achtergrond te voorzien. De achtergrond wordt alleen zichtbaar bij het activeren van de darkmode. 
+  <img src="readme-images/afbeelding7.png" width="375px">
+
 
 </details>
-
-
-
 
 
 ## Eindgesprek (week 5)
@@ -209,13 +229,29 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  - Het maken van een light/darkmode
+  <img src="readme-images/afbeelding8.png" width="375px">
+  <img src="readme-images/afbeelding14.png" width="375px">
+    <img src="readme-images/afbeelding9.png" width="375px">
+  - Het maken van een carrousel door middel van een horizontale scroll.
+  <img src="readme-images/afbeelding11.png" width="375px">
+  - het maken van een dropdown door middel van het <details> element. 
+  <img src="readme-images/afbeelding12.png" width="375px">
+  <img src="readme-images/afbeelding13.png" width="375px">
+  - het gebruiken van svg's in mijn html pagina.
+  - het gebruiken van een tabel in mijn html
+  - Het gebruik maken van knoppen die de DOM-manipuleren (in dit geval gebruikt voor het aanpassen van hoeveelheden)
+  - Het gebruiken van een knop die een 'lees meer' sectie opent
+
+
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
+  - de dropdowns aanpassen naar hoe het er op de originele website uitziet
+  - door middel van javaScript een carrousel maken.
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
