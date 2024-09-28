@@ -239,21 +239,28 @@ De darkmode laat ik wel nog aanroepen door middel van javascript
   - <img src="readme-images/afbeelding12.png" width="375px">
   - <img src="readme-images/afbeelding13.png" width="375px">
   - het gebruiken van svg's in mijn html pagina.
+ - <img src="readme-images/afbeelding15.png" width="375px">
   - het gebruiken van een tabel in mijn html
+ - <img src="readme-images/afbeelding16.png" width="375px">
   - Het gebruik maken van knoppen die de DOM-manipuleren (in dit geval gebruikt voor het aanpassen van hoeveelheden)
+ - <img src="readme-images/afbeelding17.png" width="375px">
   - Het gebruiken van een knop die een 'lees meer' sectie opent
+ - <img src="readme-images/afbeelding18.png" width="375px">
+- <img src="readme-images/afbeelding19.png" width="375px">
 
-
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
   - de dropdowns aanpassen naar hoe het er op de originele website uitziet
-  - door middel van javaScript een carrousel maken.
+    - <img src="readme-images/afbeelding12.png" width="375px">
+  - <img src="readme-images/afbeelding13.png" width="375px">
+  - <img src="readme-images/afbeelding20.png" width="375px">
+  - <img src="readme-images/afbeelding21.png" width="375px">
+  - door middel van javaScript een carrousel maken. Ik heb het nu namelijk gewoon met enkel css gedaan. 
+  - <img src="readme-images/afbeelding22.png" width="375px">
+  - <img src="readme-images/afbeelding23.png" width="375px">
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
 
 
