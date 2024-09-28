@@ -40,11 +40,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina 
-  <img src="readme-images/hf-home.jpg" width="375px" alt="De homepagina van de hello fresh website">
+  <img src="readme-images/hf-home.JPG" width="375px" alt="De homepagina van de hello fresh website">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   receptenpagina
-  <img src="readme-images/hf-recepten.JPG" width="375px" alt="De pagina met een aantal recepten">
+  <img src="readme-images/scherm2.JPG" width="375px" alt="De pagina met daarop een recept">
  
 </details>
 
@@ -57,6 +57,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  - Doorgestreepte teksten worden niet duidelijk vermeld. Bijvoorbeeld bij het gebruik van kortingen waarbij de oude prijs wordt aangeduid d.m.v.
+    een streep door de tekst.
+  - De homepagina maakt gebruik van een animatie die steeds letters toevoegd om een woord te spellen. Bij het gebruik van een screenreader is dit
+    zeer onpraktisch. Het wordt het namelijk totaal niet duidelijk van.
+  - Niet elke afbeelding/icoon is goed aangegeven met een alternatieve tekst. Bij het gebruik van een screenreader wordt er namelijk alleen maar 
+    vermeld dat het om een afbeelding gaat maar niet wat daarop te zien is. De afbeeldingen die wel een alternatieve tekst bevatten hebben geen 
+    betekenisvolle tekst. 
+  - Sommige delen van de tekst op de homepagina worden overgeslagen en niet voorgelezen.
+  - De recepten op de detailpagina's (pop-up) worden op een onlogische volgorde voorgelezen. Het begint namelijk vanaf onderaan.
 
 </details>
 
@@ -88,26 +97,27 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik vond het erg lastig hoe ik de tweede pagina kon voorzien van eigen css, zonder in de knoop te komen met de vormgeving. Zo gebruikte ik namelijk steeds de nth-child. Op die manier wordt het op allebei de pagina's toegevoegd. 
+  
+
+
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
+  Hier wat vragen die ik had voor de studentassistenten tijdens het feedbackuurtje:
+  - Hoe gebruik ik nth-child bij bij meerdere html pagina’s zonder ze op allebei te gebruiken
+  - Hoe kan ik de recepten op het homescherm als een carrousel maken. Zoals het ook op de originele site gebeurd?
+  - Moet ik kiezen voor een pop-up of een tweeede scherm?
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Zorg dat de lettertype in de body wordt aangeroepen, zodat ik dat niet iedere keer hoef te doen. Zo word ook de code netter
+  - Zorg dat je de main van de tweede pagina een class geeft zodat ik de css op die manier kan aanroepen
+  - gebruik een ul met daarin li-items. In de li moeten dan de losse elementen van de blokjes van de carrousel komen
+  - Op Hello Fresh 
 
 </details>
 
@@ -125,22 +135,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  - Wanneer is het gebruiken van een div legaal?
+  - Hoe kan ik met css de details aanpassen?
+  - Hoe krijg ik de nav op de recept pagina goed in plaats van hoe het er nu staat?
+  - Hoe kan ik een svg in een html zetten?
+  - Niet alle plaatjes op willen mee bewegen op de recept pagina.
+  - Ik krijg een error bij het typen in de css. Is dit ernstig of kan ik dit negeren?
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Als ik stukjes gebruik die alleen vormgegeven moeten worden, maar geen heading hebben. 
+  - De <details> zijn moeilijk vorm te geven, dus dat mocht ik laten zoals het er op dit moment uitziet.
+  - Alles wat we (Danny en ik) geprobeerd hebben wilde niet werken. Dus heb ik het afgekort ingevuld. 
+  - Dat heb ik uitgelegd gekregen en naar aanleiding daarvan in mijn html gezet.
+  - 
 
 </details>
 
@@ -184,10 +193,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - de :root aanpassen in de css en niet via de javascriptt
+  - het hamburgermenu in laten faden (misschien door midddel van opacity)
 
 </details>
 
@@ -229,8 +236,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://www.sitepoint.com/style-html-details-element/
+  2. https://blog.hubspot.com/website/horizontal-scrolling#:~:text=To%20enable%20horizontal%20scrolling%2C%20we,it%20accessible%20via%20horizontal%20scrolling.
+  3. https://www.sitepoint.com/style-html-details-element/ 
+  4. https://www.svgrepo.com/svg/445821/information-circle
+  5. https://www.svgrepo.com/svg/421558/burger-menu 
+  6. https://www.shecodes.io/athena/264278-how-to-prevent-content-from-overflowing-in-a-div-element 
+  7. https://stackoverflow.com/questions/76693549/responsive-horizontally-scrollable-image-gallery
+  8. https://www.flaticon.com/free-icon/down-arrow_2985150?term=down+arrow&related_id=2985150
+  9. https://dlo.mijnhva.nl/content/enforced/609314-FDMCI-2000FED121-DMCI-CMD-2425/FED%2024-25%20-%20Blok%201%20-%20Oefening%20JS%203-stap.pdf
+  10. https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver
+  11. https://medium.com/@burcuuusaglam/intersection-observer-in-javascript-and-lazy-load-images-38618f2c5864
+  12. 
+
 
 </details>
