@@ -32,7 +32,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Je website
 
-<details open>
+<details>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
@@ -96,8 +96,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   Ik vond het erg lastig hoe ik de tweede pagina kon voorzien van eigen css, zonder in de knoop te komen met de vormgeving. Zo gebruikte ik namelijk steeds de nth-child. Op die manier wordt het op allebei de pagina's toegevoegd. 
-  <img src="readme-images/afbeelding-1" width="375px"
+  <img src="readme-images/afbeelding1.png" width="375px">
 
+  Daarnaast vond ik het lastig om een carrousel te maken. Ik wist dat ik de elementen in een list moest maken, maar vond het toch lastig om het horizontaal scrolbaar te maken.
+  <img src="readme-images/afbeelding2.png" width="375px">
+  <img src="readme-images/afbeelding3.png" width="375px">
 
 
 
