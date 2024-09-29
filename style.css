@@ -143,7 +143,6 @@ h1 {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: unset;
-    color: black;
 }
 
 h2 {
@@ -208,10 +207,13 @@ section:first-of-type h2 {
     font-size: 32px;
 }
 
-section:first-of-type h3{
+section:first-of-type h3 {
     display: none;
 }
 
+.homepagina h1 {
+    display: none;
+}
 
 .typewrite {
     background-color: transparent;
@@ -223,14 +225,15 @@ section:first-of-type h3{
 /* 3. Prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
     .typewrite {
-      display: none;
+        display: none;
     }
+
     section:first-of-type h3 {
         display: block;
         font-size: 24px;
         margin-top: 0em;
     }
-  }
+}
 
 .homepagina section:first-of-type p {
     text-align: center;
@@ -493,6 +496,11 @@ section:nth-of-type(7) p {
     line-height: 32px;
 }
 
+section:nth-of-type(7) h2 {
+    font-size: 32px;
+    color: black;
+}
+
 section:nth-of-type(8) {
     background-image: url(images/strepen2.png);
     background-size: cover;
@@ -676,19 +684,6 @@ footer ul {
 #lagen {
     margin: 12em 1em 0;
 }
-
-/* .recept section:nth-of-type(2) {
-    background-color: var(--primaire-achtergrond);
-    margin-right: 1em;
-    padding: 1em 1em 1em;
-    border-top: 1px solid rgb(238, 238, 238);
-}
-
-.recept section:nth-of-type(2) p {
-    font-size: 16px;
-    text-align: left;
-    margin-top: 1.6em;
-} */
 
 .recept section:first-of-type a:first-of-type {
     padding: 12px 24px;
@@ -912,7 +907,7 @@ table p {
     display: inline-block;
 
     border: solid var(--Fresh-groen);
-    background-color: rgb(255, 255, 255);
+    background-color: var(--primaire-achtergrond);
     color: rgb(6, 122, 70);
 }
 
@@ -928,7 +923,7 @@ table p {
 
 .voedingswaarden button:active {
     background-color: rgb(6, 122, 70);
-    color: rgb(255, 255, 255);
+    color:  rgb(255, 255, 255);
 }
 
 .ingredienten {

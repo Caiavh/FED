@@ -7,8 +7,8 @@ var deNav = document.querySelector(".menu");
 var sluitButton = document.querySelector(".sluitmenu");
 
 
-openButton.addEventListener('click',openMenu);
-sluitButton.addEventListener('click',sluitMenu);
+openButton.addEventListener('click', openMenu);
+sluitButton.addEventListener('click', sluitMenu);
 
 function openMenu() {
     console.log("hallo")
@@ -18,7 +18,7 @@ function openMenu() {
 
 function sluitMenu() {
     deNav.classList.remove("toonMenu")
-    body.classList.remove('disable');  
+    body.classList.remove('disable');
 }
 
 // knop voor de 'lees meer' knop
@@ -66,23 +66,23 @@ const hoeveelheden = document.querySelectorAll('.hoeveelheid');
 
 // Bron: https://www.w3schools.com/js/js_objects.asp
 const standaardHoeveelheden = [
-    { basis: 2, eenheid: 'stuk(s)' },   
-    { basis: 100, eenheid: 'gram' },    
-    { basis: 5, eenheid: 'stuk(s)' },   
-    { basis: 0.25, eenheid: 'head' },   
-    { basis: 30, eenheid: 'gram' },     
-    { basis: 1, eenheid: 'stuk(s)' },   
-    { basis: 20, eenheid: 'gram' },     
-    { basis: 0.5, eenheid: 'el' },      
-    { basis: 0.5, eenheid: 'el' },      
-    { basis: 1, eenheid: 'el' }         
+    { basis: 2, eenheid: 'stuk(s)' },
+    { basis: 100, eenheid: 'gram' },
+    { basis: 5, eenheid: 'stuk(s)' },
+    { basis: 0.25, eenheid: 'head' },
+    { basis: 30, eenheid: 'gram' },
+    { basis: 1, eenheid: 'stuk(s)' },
+    { basis: 20, eenheid: 'gram' },
+    { basis: 0.5, eenheid: 'el' },
+    { basis: 0.5, eenheid: 'el' },
+    { basis: 1, eenheid: 'el' }
 ];
 
 // Functie om de hoeveelheden aan te passen
 // bron: https://www.shecodes.io/athena/1958-what-is-document-queryselectorall-in-javascript
 
 function updateHoeveelheden(vermenigvuldiger) {
-    hoeveelheden.forEach(function(hoeveelheid, index) {
+    hoeveelheden.forEach(function (hoeveelheid, index) {
         const item = standaardHoeveelheden[index];
         const nieuweWaarde = item.basis * vermenigvuldiger;
         let weergaveWaarde;
@@ -124,7 +124,7 @@ function darkMode() {
 const logoKnop = document.querySelector('header img:first-of-type');
 const limoenen = document.querySelector('.limoenen');
 // 5. audio
-let audioLimoen = new Audio("audio/limoenen.mp3") 
+let audioLimoen = new Audio("audio/limoenen.mp3")
 
 logoKnop.addEventListener('click', limoenRegen);
 
