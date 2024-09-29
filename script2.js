@@ -9,8 +9,8 @@ var deNav = document.querySelector(".menu");
 var sluitButton = document.querySelector(".sluitmenu");
 
 
-openButton.addEventListener('click',openMenu);
-sluitButton.addEventListener('click',sluitMenu);
+openButton.addEventListener('click', openMenu);
+sluitButton.addEventListener('click', sluitMenu);
 
 function openMenu() {
     console.log("hallo")
@@ -20,7 +20,7 @@ function openMenu() {
 
 function sluitMenu() {
     deNav.classList.remove("toonMenu")
-    body.classList.remove('disable');  
+    body.classList.remove('disable');
 }
 
 
@@ -40,59 +40,59 @@ function darkMode() {
 // bron: https://css-tricks.com/snippets/css/typewriter-effect/
 class Typewriter {
     constructor(el, toRotate, period) {
-      this.toRotate = JSON.parse(toRotate);
-      this.el = el;
-      this.loopNum = 0;
-      this.period = parseInt(period, 10) || 2000;
-      this.txt = '';
-      this.isDeleting = false;
-      this.tick();
-    }
-  
-    tick() {
-      const i = this.loopNum % this.toRotate.length;
-      const fullTxt = this.toRotate[i];
-  
-      if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-      } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-      }
-  
-      this.el.innerHTML = `<span class="wrap">${this.txt}</span>`;
-  
-      let delta = 200;
-      if (this.isDeleting) delta /= 2;
-  
-      if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-      } else if (this.isDeleting && this.txt === '') {
+        this.toRotate = JSON.parse(toRotate);
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
         this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-      }
-      setTimeout(() => this.tick(), delta);
+        this.tick();
     }
-  }
-  
-  window.onload = () => {
+
+    tick() {
+        const i = this.loopNum % this.toRotate.length;
+        const fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = `<span class="wrap">${this.txt}</span>`;
+
+        let delta = 200;
+        if (this.isDeleting) delta /= 2;
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+        setTimeout(() => this.tick(), delta);
+    }
+}
+
+window.onload = () => {
     const pElement = document.querySelector('section:first-of-type p');
-      startTypewriterAnimation();
-    };
-  
-  function startTypewriterAnimation() {
+    startTypewriterAnimation();
+};
+
+function startTypewriterAnimation() {
     const elements = document.querySelectorAll('.typewrite');
     elements.forEach(el => {
-      const toRotate = el.getAttribute('data-type');
-      const period = el.getAttribute('data-period');
-      if (toRotate) {
-        new Typewriter(el, toRotate, period);
-      }
+        const toRotate = el.getAttribute('data-type');
+        const period = el.getAttribute('data-period');
+        if (toRotate) {
+            new Typewriter(el, toRotate, period);
+        }
     });
-  }
-  
-  
+}
+
+
 
 // 2. de blingbling 
 // dat gebeurd bij het drukken op het logo
@@ -101,7 +101,7 @@ const logoKnop = document.querySelector('header img:first-of-type');
 const limoenen = document.querySelector('.limoenen');
 // 5. audio
 // bron: eerder project bij inleiding programmeren
-let audioLimoen = new Audio("audio/limoenen.mp3") 
+let audioLimoen = new Audio("audio/limoenen.mp3")
 
 logoKnop.addEventListener('click', limoenRegen);
 
@@ -122,19 +122,19 @@ function limoenOpnieuw() {
 const derdeSectionImages = document.querySelectorAll('section:nth-of-type(3) img');
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      console.log("ik kan het zien")
-    } else {
-    }
-  });
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            console.log("ik kan het zien")
+        } else {
+        }
+    });
 });
 
 // Met behulp van ChatGPT / Prompt: Hoe zorg ik ervoor dat de plaatjes rustig in het scherm gebracht worden? 
 derdeSectionImages.forEach(image => {
-  image.classList.add('hidden');
-  observer.observe(image);
+    image.classList.add('hidden');
+    observer.observe(image);
 });
 
 

@@ -165,7 +165,7 @@ Daarentegen ging het vormgeven van de website wel al goed. Het begon al steeds m
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
- verbeteringen
+ verbeteringen die ik heb aangebracht aan de hellofresh pagina's:
 - De HTML-pagina's zijn volledig gevalideerd. Hoewel ik mijn twee pagina's niet kan vergelijken met de gehele HelloFresh-website, is de website op het gebied van toegankelijkheid en codevalidatie wel verbeterd. 
 
 - Alle afbeeldingen op de pagina bevatten nu een correct ingevuld alt-attribuut. Dit is een belangrijke verbetering ten opzichte van de originele HelloFresh-website, waar niet alle afbeeldingen een alt-tekst hadden of deze niet voldoende beschrijvend was. De alt-teksten op mijn pagina beschrijven de afbeeldingen duidelijk, inclusief de tekst die op de afbeeldingen zelf staat, wat de toegankelijkheid verbetert, vooral voor screenreaders.
@@ -186,6 +186,10 @@ Daarentegen ging het vormgeven van de website wel al goed. Het begon al steeds m
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  Ik had wat moeite met het maken van het hamburgermenu. Ik kwam er namelijk eerst achter dat alles wat ik qua javaScript probeerde, niet wilde werken. Ik heb een aantal dagen geleden het probleem aan Danny voorgelegd en die vertelde me dat ik een tweede javaScript pagina kon aanmaken. Op deze manier deed het hamburgermenu het in ieder geval. Alleen nu krijg ik het niet voor elkaar om het scherm achter het hamburgermenu stil te houden.
+  <img src="readme-images/afbeelding6.png" width="375px">
+
+  Ook loop ik tegen het probleem aan dat alle svg's niet doen wat ik wil. Zo worden bijvoorbeeld alle Sociale media logo's hetzelfde logo.  
 
   ### Agenda voor meeting
   - de logo's die ik gebruik zijn alleen maar facebook logo's. Hoe kan ik dit oplossen?
@@ -229,23 +233,23 @@ De darkmode laat ik wel nog aanroepen door middel van javascript
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  - Het maken van een light/darkmode
-  - <img src="readme-images/afbeelding8.png" width="375px">
- - <img src="readme-images/afbeelding14.png" width="375px">
-  - <img src="readme-images/afbeelding9.png" width="375px">
-  - Het maken van een carrousel door middel van een horizontale scroll.
-  - <img src="readme-images/afbeelding11.png" width="375px">
-  - het maken van een dropdown door middel van het  details element. 
-  - <img src="readme-images/afbeelding12.png" width="375px">
-  - <img src="readme-images/afbeelding13.png" width="375px">
-  - het gebruiken van svg's in mijn html pagina.
- - <img src="readme-images/afbeelding15.png" width="375px">
-  - het gebruiken van een tabel in mijn html
- - <img src="readme-images/afbeelding16.png" width="375px">
-  - Het gebruik maken van knoppen die de DOM-manipuleren (in dit geval gebruikt voor het aanpassen van hoeveelheden)
- - <img src="readme-images/afbeelding17.png" width="375px">
-  - Het gebruiken van een knop die een 'lees meer' sectie opent
- - <img src="readme-images/afbeelding18.png" width="375px">
+- Het maken van een light/darkmode
+- <img src="readme-images/afbeelding8.png" width="375px">
+- <img src="readme-images/afbeelding14.png" width="375px">
+- <img src="readme-images/afbeelding9.png" width="375px">
+- Het maken van een carrousel door middel van een horizontale scroll.
+- <img src="readme-images/afbeelding11.png" width="375px">
+- het maken van een dropdown door middel van het  details element. 
+- <img src="readme-images/afbeelding12.png" width="375px">
+- <img src="readme-images/afbeelding13.png" width="375px">
+- het gebruiken van svg's in mijn html pagina.
+- <img src="readme-images/afbeelding15.png" width="375px">
+- het gebruiken van een tabel in mijn html
+- <img src="readme-images/afbeelding16.png" width="375px">
+- Het gebruik maken van knoppen die de DOM-manipuleren (in dit geval gebruikt voor het aanpassen van hoeveelheden)
+- <img src="readme-images/afbeelding17.png" width="375px">
+- Het gebruiken van een knop die een 'lees meer' sectie opent
+- <img src="readme-images/afbeelding18.png" width="375px">
 - <img src="readme-images/afbeelding19.png" width="375px">
 
 
